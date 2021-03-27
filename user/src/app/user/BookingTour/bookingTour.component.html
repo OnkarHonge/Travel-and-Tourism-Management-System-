@@ -1,0 +1,52 @@
+
+
+<div class="row">
+
+    <div class="col-md-4"></div>
+  
+    <div class="col-md-4">
+      <div class="register">
+        <div class="form">
+            <h1>Book Tour</h1>
+          <div class="form-group">
+            <label for="">Tour destination</label>
+            <select [(ngModel)]="destinationid" class="form-control">
+              <option
+                *ngFor="let destinationid of destination"
+                [value]="destinationid.destinationid">{{destinationid.destination}}
+              </option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="">Package Type</label>
+            <select [(ngModel)]="packagetype" class="form-control">
+              <option>Platinum</option>
+              <option>Gold</option>
+              <option>Silver</option>
+            </select>
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="">Check in date</label>
+            <input [(ngModel)]="check_in_date" type="date" class="form-control">
+          </div> -->
+
+          <!-- <div class="form-group">
+            <label for="">Check out date</label>
+            <input [(ngModel)]="check_out_date" type="date" class="form-control">
+          </div> -->
+  
+          <div class="form-group">
+            <button (click)="onBookTour()" class="btn btn-success">Book</button>
+            <!-- <a routerLink="/payment-component" class="btn btn-primary" style="margin-left: 10px">Pay</a> -->
+            <a routerLink="/website-component" class="btn btn-danger pull-right">Cancel</a>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-4"></div>
+  
+  </div>

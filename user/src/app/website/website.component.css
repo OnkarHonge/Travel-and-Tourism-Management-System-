@@ -1,0 +1,114 @@
+/* Remove the navbar's default margin-bottom and rounded borders */
+.navbar {
+  margin-bottom: 0;
+  border-radius: 2;
+}
+
+/* Add a gray background color and some padding to the footer */
+footer {
+  background-color: #f2f2f2;
+  padding: 25px;
+}
+
+#AboutUsContainerText {
+  word-wrap: break-word;
+}
+
+#kesari-logo {
+  color: rgb(114, 0, 207);
+}
+
+/* #kesari-tagline {
+} */
+
+/* .carousel-inner img {
+  width: 100%;
+  margin: auto;
+  min-height:200px;
+} */
+
+/* Hide the carousel text when the screen is less than 600 pixels wide */
+@media (max-width: 600px) {
+  .carousel-caption {
+    display: none;
+  }
+}
+
+.jumbotron {
+  background-image: url("/assets/food/island.jpg");
+  background-repeat: no-repeat;
+  /* background-attachment: fixed;  */
+  background-size: cover;
+  padding: 25px;
+  color: antiquewhite;
+  text-shadow: 5px 5px 7px #baff85;
+}
+
+.AboutUs {
+  background-origin: padding-box;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 5px;
+  /* background-color: antiquewhite; */
+  /* background-image: url("/assets/food/2.jpg"); */
+  background-color: orange;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 30px;
+}
+
+p {
+  text-align: justify;
+  text-indent: 50px;
+  line-height: 1.8;
+  font-family: "Times New Roman", Times, serif;
+  font-style: oblique;
+  font-size: 20px;
+}
+
+#slider {
+  overflow: hidden;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}

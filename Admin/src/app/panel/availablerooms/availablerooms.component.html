@@ -1,0 +1,39 @@
+<h1>Available rooms</h1>
+
+<table class="table table-stripped table-bordered">
+    <thead>
+    <tr>
+        <th>RoomCategory ID</th>
+        <th>Room Category</th>
+        <th>No of Room</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let category of categories; let index=index">
+            <!-- <td>{{category.categoryid}}</td> -->
+            <td>{{index +1}}</td>
+            <td>{{category.category}}</td>
+            <td>{{category.count}}</td>
+            <td>
+                <button (click)="onDelete(category.categoryid)" class="btn btn-danger" >
+                  <i class="glyphicon glyphicon-trash"></i>
+                </button>
+                
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<button (click)="onAddCategory()" type="button" class="btn btn-primary" style="margin-right: 10px">
+        <!-- <i class="glyphicon glyphicon-plus"></i> -->
+        Add Room category
+</button>
+
+<button (click)="onAddRoom()" type="button" class="btn btn-primary" style="margin-right: 10px">
+    Add Room
+</button>
+
+<button (click)="onBack()" type="button" class="btn btn-danger">
+    Back
+</button>

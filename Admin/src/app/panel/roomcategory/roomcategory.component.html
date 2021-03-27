@@ -1,0 +1,46 @@
+<h3>Add Room Category</h3>
+
+
+
+<div class="row">
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-4">
+        <div class="form">
+            <label>Category id</label>
+<input [(ngModel)]="categoryid" type="text" hint="categoryid" style="margin-left: 10px">
+<br>
+<label>Category</label>
+<input [(ngModel)]="category" type="text" style="margin-left: 25px">
+<br>
+<button (click)="onAddRoomCategory()" type="button" class="btn btn-success" style="margin-right: 10px">Add</button>
+<button (click)="onBack()" type="button" right-margin="10px" class="btn btn-danger">Back</button>
+
+    </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+        <h2>Available Room Categories</h2>
+        <table class="table table-stripped table-bordered">
+            <thead>
+                <tr>
+                    <th>SR. No.</th>
+                    <th>Category Id</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
+            <tbody>
+                    <tr *ngFor="let room of roomcategory; let index=index">
+                            <td>{{index + 1}}</td>
+                            <td>{{room.categoryid}}</td>
+                            <td>{{room.category}}</td>
+                            
+                        </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="col-md-1"></div>
+
+</div>

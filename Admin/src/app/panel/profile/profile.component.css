@@ -1,0 +1,20 @@
+h1{
+    font-family: "Times New Roman", Times, serif;
+    font-style: bold;
+    text-transform: uppercase;
+}
+
+img {
+    border-radius: 50%;
+
+  }
+
+  table{
+    font-family: "Times New Roman", Times, serif;
+    font-size: 20px;
+
+  }
+
+  .profile{
+    font-weight: bold;
+  }

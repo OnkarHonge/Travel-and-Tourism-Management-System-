@@ -1,0 +1,54 @@
+
+
+<div class="row">
+
+
+  
+    <div class="col-md-4">
+      <div class="register">
+          <h1>Payment</h1>
+        <div class="form">
+
+          <div class="form-group">
+            <label for="">Email Id</label>
+            <input [(ngModel)]="email" type="email" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="">Bookid</label>
+            <input [(ngModel)]="bookid" type="text" class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <label for="">Billing Mode</label>
+            <input [(ngModel)]="billingmode" type="text" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="">Amount</label>
+            <input [(ngModel)]="amount" type="text" class="form-control">
+            <button (click)="onGetAmount()" class="btn btn-success"> Get Amount </button>
+          </div>
+
+          <div class="form-group">
+            <label for="">Billing Date</label>
+            <input [(ngModel)]="billingdate" type="date" class="form-control">
+          </div>
+
+          <!-- <div class="form-group">
+            <label for="">Status</label>
+            <input [(ngModel)]="status" type="text" class="form-control">
+          </div> -->
+  
+          <div class="form-group">
+            <button (click)="onPay()" class="btn btn-success">Pay</button>
+            <a routerLink="/book-component" class="btn btn-danger pull-right">Cancel</a><br>
+            <a routerLink="/paymentcopy-component">get Bookid</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-4"></div>
+  
+  </div>

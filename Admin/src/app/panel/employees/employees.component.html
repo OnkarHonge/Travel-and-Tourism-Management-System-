@@ -1,0 +1,47 @@
+<h1>Employees</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Sr. No.</th>
+        <th>Categories</th>
+        <th>ID</th>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Email</th>
+        <th>Contact No.</th>
+        <th>Date of Joining</th>
+        <th>Date of Birth</th>
+        <th>Salary</th>
+        <th>Photo</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let employee of Employee; let index=index">
+            <td>{{index +1}}</td>
+            <td>{{employee.categories}}</td>
+            <td>{{employee.empid}}</td>
+            <td>{{employee.empfirstname}}</td>
+            <td>{{employee.emplastname}}</td>
+            <td>{{employee.empemail}}</td>
+            <td>{{employee.empcontact}}</td>
+            <td>{{employee.dateofjoining}}</td>
+            <td>{{employee.dateofbirth}}</td>
+            <td>{{employee.salary}}</td>
+            <td><img src="http://localhost:4000/{{employee.image}}" alt="employee" height="30" width="30"></td>
+            <td>
+                 <button (click)="onDelete(employee.empid)" class="btn btn-danger" >
+                  <i class="glyphicon glyphicon-trash"></i>
+                </button>
+                 <!-- <button (click)="onUpdate(employee.empid)" class="btn btn-warning" >
+                  <i class="glyphicon glyphicon-pencil"></i>
+                </button> -->
+            </td>
+        </tr>
+    </tbody>
+    <!-- <button (click)="Back()" class="btn btn-primary" >
+            Back
+    </button> -->
+</table>

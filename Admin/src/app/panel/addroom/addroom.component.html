@@ -1,0 +1,65 @@
+<h1>Rooms</h1>
+
+<div class="row">
+
+    <div class="col-md-1"></div>
+
+    <div class="col-md-4">
+        <div class="form">
+            <h1>Add new Room</h1>
+    
+            <div class="form-group">
+              <label for="">Room Category</label>
+              <select [(ngModel)]="categoryid" class="form-control">
+                <option
+                  *ngFor="let categoryid of category"
+                  [value]="categoryid.categoryid">{{categoryid.category}}</option>
+              </select>
+            </div>
+            <div class="form-group">
+                <label for="">Bedding Category</label>
+                <select [(ngModel)]="beddingtype" class="form-control">
+                  <option aria-selected="true">Single</option>
+                  <option>Double</option>
+                  <option>Triple</option>
+                  <option>Quad</option>
+                </select>
+              </div>
+              <button (click)="onAddRoom()" type="button" class="btn btn-success">
+                <i class="glyphicon glyphicon-ok"></i>
+        </button>
+        <a routerLink="/availablerooms-component" class="btn btn-warning pull-left"> <i class="glyphicon glyphicon-arrow-left"></i></a>
+    </div>
+    </div>
+    <div class="col-md-2"></div>
+    <div class="col-md-4">
+      <table class="table table-stripped table-bordered">
+        <thead>
+        <tr>
+            <th>Room ID</th>
+            <th>Room Type</th>
+            <th>Bedding Type</th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let beddingtype of bedding; let index=index">
+            <!-- <td>{{beddingtype.bedid}}</td> -->
+            <td>{{index + 1}}</td>
+            <td>{{beddingtype.category}}</td>
+            <td>{{beddingtype.beddingtype}}</td>
+            <td>
+                <button (click)="onDelete(beddingtype.bedid)" class="btn btn-danger" >
+                  <i class="glyphicon glyphicon-trash"></i>
+                </button>
+                
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+
+    <div class="col-md-1"></div>
+
+</div>
+

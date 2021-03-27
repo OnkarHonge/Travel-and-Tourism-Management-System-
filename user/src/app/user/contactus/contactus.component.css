@@ -1,0 +1,31 @@
+section.team {
+    background-color: antiquewhite;
+    padding: 30px;
+}
+
+section.about-us {
+    background-color: #252F3D;
+    padding: 30px;
+}
+
+
+section.about-us strong {
+    color: white;
+}
+
+ul.about-us-links {
+    list-style: none;
+    padding: 0;
+}
+
+ul.about-us-links > li {
+    margin-top: 5px;
+}
+
+ul.about-us-links > li > a {
+    color: white;
+}
+
+ul.about-us-links > li > a:hover {
+    color: black;
+}

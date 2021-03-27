@@ -1,0 +1,33 @@
+<h1>New Room Bookings</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Bookid</th>
+        <th>firstname</th>
+        <th>lastname</th>
+        <th>email</th>
+        <th>contact</th>
+        <th>amount</th>
+        <th>roomcategory</th>
+        <th>beddingcategory</th>
+    </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let user of Users; let index=index">
+            <td>{{user.bookid}}</td>
+            <td>{{user.firstname}}</td>
+            <td>{{user.lastname}}</td>
+            <td>{{user.email}}</td>
+            <td>{{user.contact}}</td>
+            <td>{{user.amount}}</td>
+            <td>{{user.category}}</td>
+            <td>{{user.beddingtype}}</td>
+        </tr>
+    </tbody>
+    <!-- <button (click)="Back()" class="btn btn-primary" >
+            Back
+    </button> -->
+</table>
+  

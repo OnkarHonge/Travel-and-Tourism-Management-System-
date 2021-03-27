@@ -1,0 +1,52 @@
+
+
+<div class="row">
+
+    <div class="col-md-4"></div>
+  
+    <div class="col-md-4">
+      <div class="register">
+        <div class="form">
+            <h1>Book Room</h1>
+          <div class="form-group">
+            <label for="">Type of Rooms</label>
+            <select [(ngModel)]="categoryid" class="form-control">
+              <option
+                *ngFor="let categoryid of category"
+                [value]="categoryid.categoryid">{{categoryid.category}}</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="">Bedding Category</label>
+            <select [(ngModel)]="beddingtype" class="form-control">
+              <option>Single</option>
+              <option>Double</option>
+              <option>Triple</option>
+              <option>Quad</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="">Check in date</label>
+            <input [(ngModel)]="check_in_date" type="date" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="">Check out date</label>
+            <input [(ngModel)]="check_out_date" type="date" class="form-control">
+          </div>
+  
+          <div class="form-group">
+            <button (click)="onBook()" class="btn btn-success">Book</button>
+            <a routerLink="/payment-component" class="btn btn-primary" style="margin-left: 10px">Pay</a>
+            <a routerLink="/website-component" class="btn btn-danger pull-right">Cancel</a>
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="col-md-4"></div>
+  
+  </div>

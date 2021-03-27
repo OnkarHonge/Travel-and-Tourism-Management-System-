@@ -1,0 +1,31 @@
+<h1>Payment</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>Sr. No.</th>
+        <th>Book ID</th>
+        <th>Bed ID</th>
+        <th>Billing No</th>
+        <th>Amount</th>
+        <th>Billing Date</th>
+        <th>Status No.</th>
+    </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let payment of Payment; let index=index">
+            <td>{{index +1}}</td>
+            <td>{{payment.bookid}}</td>
+            <td>{{payment.bedid}}</td>
+            <td>{{payment.billingno}}</td>
+            <td>{{payment.amount}}</td>
+            <td>{{payment.billingdate}}</td>
+            <td>{{payment.status}}</td>
+            
+        </tr>
+    </tbody>
+    <!-- <button (click)="Back()" class="btn btn-primary" >
+            Back
+    </button> -->
+</table>
